@@ -23,5 +23,60 @@
      */
     $texto2 = "estaba bueno, pero no me dieron de tomar.";
     $mensaje = sprintf("El mute %s ", $texto2);
-    echo $mensaje
+    echo $mensaje;
+
+    echo "<br></br>";
+    /**
+     * ? Variables y constantes, las variables en php se crean usando primero el "$" y luego si el nombre de la variable, del resto es como siempre, se le asigna el valor usando el "="
+     */
+
+    /**
+     * ! VARIABLES
+     */
+    /**
+     * ? Declaramos un entero, usamos el var_dumb en todos los ejemplos posteriores para ver en la pagina el tipo de dato que es y su contenido
+     */
+    $edad = 19;
+    echo var_dump($edad);
+
+    echo "<br></br>";
+    /**
+     * ?Declaramos un string
+     */
+    $nombre = "Luis";
+    echo var_dump($nombre);
+
+    echo "<br></br>";
+    /**
+     * ? Declaramos un booleano
+     */
+    $es_valido = true;
+    echo var_dump($es_valido);
+
+    /**
+     * ! CONSTANTES
+     */
+
+    
+    echo "<br></br>";
+    /**
+     * ? Declaramos una constante numerica, las variables funcionan algo similar al par "llave, valor", creamos tanto el nombre de la variable (llave) como su contenido (valor) dentro del "define", luego para usarlo lo llamamos por su nombre (llave).
+     */
+    define("PI", 3.1416);
+    echo var_dump(PI);
+
+    echo "<br></br>";
+    /**
+     * ? Declaramos una constante de texto
+     */
+    define("SALUDO", "Que tengo hambreee!!");
+    echo var_dump(SALUDO);
+
+    echo "<br></br>";
+    /**
+     * ? Declaramos una constante booleana
+     */
+
+     define("ES_VALIDO", true);
+     echo var_dump(ES_VALIDO);
 ?> 
