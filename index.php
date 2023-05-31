@@ -1,7 +1,7 @@
 <?php  
     /**
      * TODO: Punto 6.
-     * *Funciones de salida, las funciones mas comunes en php son las siguientes.
+     * ? Funciones de salida, las funciones mas comunes en php son las siguientes.
      */
 
     /**
@@ -36,21 +36,21 @@
      * ! VARIABLES
      */
     /**
-     * ? Declaramos un entero, usamos el var_dumb en todos los ejemplos posteriores para ver en la pagina el tipo de dato que es y su contenido
+     * * Declaramos un entero, usamos el var_dumb en todos los ejemplos posteriores para ver en la pagina el tipo de dato que es y su contenido
      */
     $edad = 19;
     echo var_dump($edad);
 
     echo "<br></br>";
     /**
-     * ?Declaramos un string
+     * * Declaramos un string
      */
     $nombre = "Luis";
     echo var_dump($nombre);
 
     echo "<br></br>";
     /**
-     * ? Declaramos un booleano
+     * * Declaramos un booleano
      */
     $es_valido = true;
     echo var_dump($es_valido);
@@ -62,21 +62,21 @@
     
     echo "<br></br>";
     /**
-     * ? Declaramos una constante numerica, las variables funcionan algo similar al par "llave, valor", creamos tanto el nombre de la variable (llave) como su contenido (valor) dentro del "define", luego para usarlo lo llamamos por su nombre (llave).
+     * * Declaramos una constante numerica, las constantes funcionan algo similar al par "llave, valor", creamos tanto el nombre de la variable (llave) como su contenido (valor) dentro del "define", luego para usarlo lo llamamos por su nombre (llave).
      */
     define("PI", 3.1416);
     echo var_dump(PI);
 
     echo "<br></br>";
     /**
-     * ? Declaramos una constante de texto
+     * * Declaramos una constante de texto
      */
     define("SALUDO", "Que tengo hambreee!!");
     echo var_dump(SALUDO);
 
     echo "<br></br>";
     /**
-     * ? Declaramos una constante booleana
+     * * Declaramos una constante booleana
      */
 
      define("ES_VALIDO", true);
@@ -84,13 +84,13 @@
 
     
      /**
-      * TODO: punto 8.
-      * *Tipos de datos, en los tipos de datos se pueden almacenar difetentes tipos de información.
-      * *Los mas comunes son los siguientes.
+      * TODO: Punto 8.
+      * ? Tipos de datos, en los tipos de datos se pueden almacenar difetentes tipos de información.
+      * ? Los mas comunes son los siguientes.
       */
     echo "<br></br>";
       /**
-       * ? Boolean
+       * ! Boolean
        * * Se utilizan para almacenar valores de verdad o falsedad, representados en true o false.
        */
       $logueado = false;
@@ -98,7 +98,7 @@
 
     echo "<br></br>";
       /**
-       * ? Int
+       * ! Int
        * * Se utilizan para almacenar números enteros sin decimales.
        */
       $numero = 200;
@@ -106,7 +106,7 @@
    
     echo "<br></br>";
       /**
-       * ? Float
+       * ! Float
        * * Se utilizan para almacenar números con decimales.
        */
       $float = 200.5;
@@ -114,7 +114,7 @@
 
     echo "<br></br>";
       /**
-       * ? Strings
+       * ! Strings
        * * Se utilizan para almacenar texto y caracteres.
        */
       $nombre2 = "Lucheto";
@@ -122,9 +122,66 @@
 
     echo "<br></br>";
       /**
-       * ? Array 
+       * ! Array 
        * * Se utiliza para almacenar un conjunto de de datos, lo datos pueden ser de diferentes tipos.
        */
       $array = ["Hoy", "tambien", "tengo", "hambre", "!!!"];
       var_dump($array);
+
+
+      /**
+       * TODO: Punto 9.
+       * ? Números y operadores, como en los demas, php tambien tiene sus operadores lógicos con los cuales podemos hacer las operaciones básicas y complejas.
+       */
+
+    echo "<br></br>";
+      /**
+       * ! Arithmetic Operator
+       * * Los operadores aritmeticos son usados para hacer operaciones matematicas sobre valores númericos. 
+       */
+      $a = 4;
+      $b = 6;
+      
+      /**
+       * ! Addition
+       * * Se utiliza para sumar el valor de "a" con el valor de "b"
+       */
+      echo $a + $b;
+
+      echo "<br></br>";
+      /**
+       * ! Subtraction
+       * * Se utiliza para restar el valor de "a" al valor de "b"
+       */
+      echo $a - $b;
+
+      echo "<br></br>";
+      /**
+       * ! Multiplication
+       * * Se utiliza para multiplicar el valor de "a" con el valor de "b"
+       */
+      echo $a * $b;
+
+      echo "<br></br>";
+      /**
+       * ! Division
+       * * Se utiliza para Dividir el valor de "a" en el valor de "b"
+       */
+      echo $a / $b;
+
+      echo "<br></br>";
+      /**
+       * ! Modulo
+       * * Se utiliza para conseguir el residuo de la division de el valor de "a" en el valor de "b"
+       */
+      echo $a % $b;
+
+      echo "<br></br>";
+      /**
+       * ! Exponentiation
+       * * Se utiliza para  de el valor de "a" en el valor de "b"
+       */
+      echo $a ** $b;
+
+
 ?> 
