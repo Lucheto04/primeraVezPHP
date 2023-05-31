@@ -79,4 +79,49 @@
 
      define("ES_VALIDO", true);
      echo var_dump(ES_VALIDO);
+
+    
+     /**
+      * *Tipos de datos, en los tipos de datos se pueden almacenar difetentes tipos de información.
+      * *Los mas comunes son los siguientes.
+      */
+    echo "<br></br>";
+      /**
+       * ? Boolean
+       * * Se utilizan para almacenar valores de verdad o falsedad, representados en true o false.
+       */
+      $logueado = true;
+      var_dump($logueado);
+
+    echo "<br></br>";
+      /**
+       * ? Int
+       * * Se utilizan para almacenar números enteros sin decimales.
+       */
+      $numero = 200;
+      var_dump($numero);
+   
+    echo "<br></br>";
+      /**
+       * ? Float
+       * * Se utilizan para almacenar números con decimales.
+       */
+      $float = 200.5;
+      var_dump($float);
+
+    echo "<br></br>";
+      /**
+       * ? Strings
+       * * Se utilizan para almacenar texto y caracteres.
+       */
+      $nombre2 = "Lucheto";
+      var_dump($nombre2);
+
+    echo "<br></br>";
+      /**
+       * ? Array 
+       * * Se utiliza para almacenar un conjunto de de datos, lo datos pueden ser de diferentes tipos.
+       */
+      $array = [];
+      var_dump($array);
 ?> 
