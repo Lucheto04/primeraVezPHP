@@ -1,5 +1,6 @@
 <?php  
     /**
+     * TODO: Punto 6.
      * *Funciones de salida, las funciones mas comunes en php son las siguientes.
      */
 
@@ -27,6 +28,7 @@
 
     echo "<br></br>";
     /**
+     * TODO: Punto 7.
      * ? Variables y constantes, las variables en php se crean usando primero el "$" y luego si el nombre de la variable, del resto es como siempre, se le asigna el valor usando el "="
      */
 
@@ -82,6 +84,7 @@
 
     
      /**
+      * TODO: punto 8.
       * *Tipos de datos, en los tipos de datos se pueden almacenar difetentes tipos de información.
       * *Los mas comunes son los siguientes.
       */
