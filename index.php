@@ -90,7 +90,7 @@
        * ? Boolean
        * * Se utilizan para almacenar valores de verdad o falsedad, representados en true o false.
        */
-      $logueado = true;
+      $logueado = false;
       var_dump($logueado);
 
     echo "<br></br>";
@@ -122,6 +122,6 @@
        * ? Array 
        * * Se utiliza para almacenar un conjunto de de datos, lo datos pueden ser de diferentes tipos.
        */
-      $array = [];
+      $array = ["Hoy", "tambien", "tengo", "hambre", "!!!"];
       var_dump($array);
 ?> 
