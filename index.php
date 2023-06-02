@@ -271,10 +271,9 @@
      * ? Ejemplo de como usar el metodo array_filter()
      */
     $ejemplo_filter = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-    $resultado_filter = array_filter($ejemplo_filter,fn($numero_filter) => 
-        $numero_filter % 2 == 0
-    );
-    print_r($resultado_filter);
+    print_r(array_filter($ejemplo_filter,fn($numero_filter) => 
+    $numero_filter % 2 == 0
+));
 
     echo "<hr>";
     echo "array_map(): ";
@@ -474,8 +473,31 @@
     echo "array_values(): ";
     /**
      * todo Metodo array_values()
-     * * Este metodo se utiliza 
+     * * Este metodo se utiliza para obtener los valores de un array asociativo, se le pasa como parametro el array en cuestion y devuelve un nuevo array unicamente con los valores del array original.
      * ? Ejemplo de como usar el metodo array_values()
      */
+    $ejemplo_values = array(
+        "Miguel" => "Sputnik",
+        "Roy" => "Artemis",
+        "Johlver" => "Apolo"
+    );
+    print_r(array_values($ejemplo_values));
 
+    echo "<hr>";
+    echo "array_walk(): ";
+    /**
+     * todo Metodo array_walk()
+     * * Este metodo se utiliza para aplicar una funcion de devolucion de llamada a cada elemento dentro de un array, se le pasan como parametros el array en cuestion y la duncion de devolución de llamada.
+     * ? Ejemplo de como usar el metodo array_walk()
+     */
+    $ejemplo_walk = array(
+        "Miguel" => "Sputnik",
+        "Roy" => "Artemis",
+        "Johlver" => "Apolo"
+    );
+    function funcionWalk ($valor, $clave) {
+        echo "El profesor $clave esta en el salon $valor, ";
+    };
+    array_walk($ejemplo_walk, 'funcionWalk');
+    print_r($ejemplo_walk);
 ?> 
