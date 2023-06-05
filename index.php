@@ -92,7 +92,6 @@
       * ? Tipos de datos, en los tipos de datos se pueden almacenar difetentes tipos de información.
       * ? Los mas comunes son los siguientes.
       */
-    echo "<br></br>";
     /**
        * ! Boolean
        * * Se utilizan para almacenar valores de verdad o falsedad, representados en true o false.
@@ -139,7 +138,6 @@
        * ? Números y operadores, como en los demas, php tambien tiene sus operadores lógicos con los cuales podemos hacer las operaciones básicas y complejas.
        */
 
-    echo "<br></br>";
     /**
        * ! Arithmetic Operator
        * * Los operadores aritmeticos son usados para hacer operaciones matematicas sobre valores númericos. 
@@ -187,6 +185,53 @@
        * * Se utiliza para  de el valor de "a" en el valor de "b"
        */
       echo $a ** $b;
+
+    /**
+       * ! Comparison Operator
+       * * los operadores de comparacion son utilizados para comparar 2 valores y determinar la relacion entre ellos. Estos operadores devuelven un valor booleano que indica si la comparación es verdadera o falsa. 
+       */
+
+    echo "<br></br>";
+    /**
+       * ! Greater than
+       * * Se utiliza para confirmar si "a" es mayor que "b"
+       */
+    var_dump($a > $b);
+
+    echo "<br></br>";
+    /**
+     * ! Less than
+     * * Se utiliza para confirmar si "a" es menor que "b"
+     */
+    var_dump($a < $b);
+
+    echo "<br></br>";
+    /**
+     * ! Greater than or equal
+     * * Se utiliza para confirmar si "a" es mayor o igual que "b"
+     */
+    var_dump($a >= $b);
+
+    echo "<br></br>";
+    /**
+     * ! Less than or equal
+     * * Se utiliza para confirmar si "a" es menor o igual que "b"
+     */
+    var_dump($a <= $b);
+
+    echo "<br></br>";
+    /**
+     * ! equal
+     * * Se utiliza para confirmar si "a" es igual que "b"
+     */
+    var_dump($a == $b);
+
+    echo "<br></br>";
+    /**
+     * ! identical
+     * * Se utiliza para confirmar si "a" es identico a "b"
+     */
+    var_dump($a === $b);
 
     echo "<hr><h1>Punto 10.</h1>";
      /**
@@ -500,4 +545,77 @@
     };
     array_walk($ejemplo_walk, 'funcionWalk');
     print_r($ejemplo_walk);
+
+
+    echo "<hr><h1>Punto 11.</h1>";
+
+    /**
+       * TODO: Punto 11.
+       * ? Isset y Empty, en php son dos funciones utilizada para verificar si una variable o el elemento de un array tienen un valor ya definido o no.
+       * * , en cambio Con empty estamos preguntando si esta vacio, por lo que si la variable o elemento estan vacios va a devolver un "true"
+       */
+
+       /**
+          * ! Isset() 
+          * * Con isset estamos preguntando si la variable o elemento existe y esta definida, por lo que si existe y esta definida devuelve un "true" y si no existe o no esta definido va a devolver un "false".
+          */
+        $isset = "Existo y estoy definida";
+        $isset_no_definida;
+        var_dump(isset($isset)); // retorna true
+        echo "<br><br>";
+        var_dump(isset($isset_no_definida));// retorna false
+
+        echo "<br></br>";
+    /**
+       * ! Empty()
+       * * on empty estamos preguntando si esta vacio, por lo que si la variable o elemento estan vacios o no existen va a devolver un "true" pero si ya existen y estan definidos va a devolver un "false".
+       */
+        $empty = "Existo y estoy definida";
+        $empty_no_definida;
+        var_dump(empty($empty)); // retorna false
+        echo "<br><br>";
+        var_dump(empty($empty_no_definida)); // retorna true
+
+    /**
+     * ! Funciones para la manipulación de datos.
+     * ? Ejemplos de algunas de las funciones que nos permiten manipular los datos que se encuentren almacenados en un arreglo.
+     */
+    $cliente = array(
+        'saldo' => 200,
+        'tipo' => 'Premium',
+        'nombre' => 'Juan'
+    );
+    /**
+     * * Ordena por valores (orden alfabetico)
+     */
+    asort($cliente);
+    echo "<pre>";
+    var_dump($cliente);
+    echo "</pre>";
+    /**
+     * *Ordena por valores (de la Z a la A)
+     */
+    arsort($cliente);
+    echo "<pre>";
+    var_dump($cliente);
+    echo "</pre>";
+    /**
+     * * Ordena por llaves (orden alfabetico)
+     */
+    ksort($cliente);
+    echo "<pre>";
+    var_dump($cliente);
+    echo "</pre>";
+    /**
+     * *Ordena por llaves (de la Z a la A)
+     */
+    krsort($cliente);
+    echo "<pre>";
+    var_dump($cliente);
+    echo "</pre>";
+
+    /**
+       * TODO: Punto 12.
+       * ? Estructuras de control.
+       */
 ?> 
