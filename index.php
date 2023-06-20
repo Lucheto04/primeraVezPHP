@@ -731,5 +731,39 @@
      ** Estas estructuras son usadas para hacer que el mismo bloque de codigo se repite una determinada cantidad de veces o mientras la condicion se cumpla.
     */
 
+    /**
+     * ! While
+     * * Permite repetir la ejecución de un bloque de código mientras se cumpla una condición. 
+     */
+    $i = 0;
+    while ($i <= 10) {
+        echo $i."<br>";
+        $i++;
+        // if ($i === 10) {
+        //     break;
+        // }
+    }
     
+    echo "<hr>";
+    /**
+     * ! Do-while
+     * * La diferencia con el bucle while es que este sin obligacion de que se cumpla la condicion siempre se ejecutara al menos una vez.
+     */
+    $i = 20;
+    do {
+        echo $i."<br>";
+        $i++;
+         // if ($i === 10) {
+         //     break;
+         // }
+    } while ($i <= 10);
+
+    echo "<hr>";
+    /**
+     * ! For
+     * * Con el bucle for podemos iterar un bloque de codigo el numero determinado de veces que le pongamos al controlador.
+     */
+    for ($i=0; $i<=10; $i++) {
+        echo $i."<br>";
+    };
 ?> 
