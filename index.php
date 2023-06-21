@@ -766,4 +766,97 @@
     for ($i=0; $i<=10; $i++) {
         echo $i."<br>";
     };
-?> 
+
+    echo "<hr>";
+    /**
+     * ! Foreach
+     * * Con el bucle foreach podemos iterar los elementos que contiene un array.
+     */
+    $ejemplo_foreach = [
+        [
+            'nombre' => 'Tablet',
+            'precio' => 200,
+            'disponible' => true
+        ],
+        [
+            'nombre' => 'Television 24',
+            'precio' => 300,
+            'disponible' => true
+        ],
+        [
+            'nombre' => 'Monitor Curvo',
+            'precio' => 400,
+            'disponible' => false
+        ]
+    ];
+    foreach ($ejemplo_foreach as $producto) {
+            echo $producto['nombre']."<br>";
+            echo $producto['precio']."<br>";
+            echo $producto['disponible']."<br>";
+            echo "<hr>";
+        }
+
+    echo "<h1>Punto 8.</h1>";
+    /**
+     * TODO: Punto 8.
+     * ? Funciones definidas por el usuario.
+     * * Las funciones definidas por el usuario son bloques de codigo que puedes ejecutar en cualquier parte del programa para realizar la tarea que tiene definida, solo tienes que crear la funcion y luego llamarla por el nombre que le diste en el lugar que quieras de tu programa, le pasas los parametros requeriodos y de ser necesario le das un valor a retornar cuando termine su dicha funcion.
+     */
+
+    echo "<hr>";
+    /**
+     * ! Función de void.
+     * * Son las funciones que no tienen un valor de retorno. No es obligatorio pasarle la palabra reservada void a estas funciones pero si es una buena practica que permite identificar de forma mas facil que tipo de funcion es. 
+     */
+    function sumar(int $numero1 = 0, int $numero2):void {
+        echo $numero1 + $numero2;
+    }
+    sumar(10, 35);
+
+    echo "<hr>";
+    /**
+     * ! Funcion que retorna.
+     * * Es una funcion que retornan un valor que es el resultado de la funcionq que se alla realizado con los parametros que le pasamos al llamar la funcion. Es importante tener en cuenta que para indicar el tipo de dato que va a retornar la función se debe utilizar los dos puntos ( : ) seguido de un símbolo de interrogante (?) y el tipo de dato a retornar. 
+     */
+    function usuaruiAutentucado(bool $autenticado_ejemplo_funcion): ?string {
+        if ($autenticado_ejemplo_funcion) {
+            return 'Autenticado';
+        } else {
+            return 'No Autenticado';
+        }
+    }
+    print(usuaruiAutentucado(false));
+    
+    echo "<hr><h1>Punto 9.</h1>";
+    /**
+     * TODO: Punto 9.
+     * ? include, require, include_once, require_once.
+     * * Estas funciones se utilizan para utilizar archivos externos al programa, son similares al 'export' y al 'import' de JavaScript. Esto nos permite incluir archivos de codigo externos en un programa PHP lo que permite la reutilización de código y la separación de la lógica del programa en diferentes archivos.
+     */
+    echo "PARA VER EL EJEMPLO IR AL ARCHIVO 'ejemplo_include.php'.";
+
+
+    echo "<hr><h1>Punto 10.</h1>";
+    /**
+      * TODO: Punto 10.
+      * ? Json_encode y json_decode.
+      * * json_encode se utiliza para convertir una estructura de datos de PHP en una cadena JSON. Y json_decode se utiliza para convertir una cadena JSON en una estructura de datos de PHP. Esta función toma una cadena JSON y la convierte en un objeto, un array asociativo o un valor escalar según corresponda.
+      */
+    $ejemplo_json_encode = [
+        [
+            'nombre' => 'Tablet',
+            'precio' => 200,
+            'disponible' => true
+        ],
+        [
+            'nombre' => 'Television 24',
+            'precio' => 300,
+            'disponible' => true
+        ],
+        [
+            'nombre' => 'Monitor Curvo',
+            'precio' => 400,
+            'disponible' => false
+        ]
+    ]
+?>
