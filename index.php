@@ -1,5 +1,5 @@
 <?php  
-    echo "<hr><h1>Punto 1.</h1>";
+    echo "<hr><h1>Punto 1 - PHP Basicó.</h1>";
 
     /**
      * TODO: Punto 1.
@@ -833,7 +833,7 @@
      * ? include, require, include_once, require_once.
      * * Estas funciones se utilizan para utilizar archivos externos al programa, son similares al 'export' y al 'import' de JavaScript. Esto nos permite incluir archivos de codigo externos en un programa PHP lo que permite la reutilización de código y la separación de la lógica del programa en diferentes archivos.
      */
-    echo "PARA VER EL EJEMPLO IR AL ARCHIVO 'ejemplo_include.php'.";
+    echo "PARA VER EL EJEMPLO IR AL ARCHIVO 'ejemplos.php'.";
 
 
     echo "<hr><h1>Punto 10.</h1>";
@@ -842,21 +842,13 @@
       * ? Json_encode y json_decode.
       * * json_encode se utiliza para convertir una estructura de datos de PHP en una cadena JSON. Y json_decode se utiliza para convertir una cadena JSON en una estructura de datos de PHP. Esta función toma una cadena JSON y la convierte en un objeto, un array asociativo o un valor escalar según corresponda.
       */
-    $ejemplo_json_encode = [
-        [
-            'nombre' => 'Tablet',
-            'precio' => 200,
-            'disponible' => true
-        ],
-        [
-            'nombre' => 'Television 24',
-            'precio' => 300,
-            'disponible' => true
-        ],
-        [
-            'nombre' => 'Monitor Curvo',
-            'precio' => 400,
-            'disponible' => false
-        ]
-    ]
+    echo "PARA VER EL EJEMPLO IR AL ARCHIVO 'ejemplos.php'.";
+
+
+    echo "<hr><h1>Punto 11 - PHP Intermedio.</h1>";
+    /**
+      * TODO: Punto 11.
+      * ? Programación Orientada a objetos.
+      * * 
+      */
 ?>
