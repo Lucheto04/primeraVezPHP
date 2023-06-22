@@ -1,5 +1,5 @@
 <?php  
-    echo "<hr><h1>Punto 1 - PHP Basicó.</h1>";
+    echo "<h1>Punto 1 - PHP Basicó.</h1>";
 
     /**
      * TODO: Punto 1.
@@ -803,7 +803,6 @@
      * * Las funciones definidas por el usuario son bloques de codigo que puedes ejecutar en cualquier parte del programa para realizar la tarea que tiene definida, solo tienes que crear la funcion y luego llamarla por el nombre que le diste en el lugar que quieras de tu programa, le pasas los parametros requeriodos y de ser necesario le das un valor a retornar cuando termine su dicha funcion.
      */
 
-    echo "<hr>";
     /**
      * ! Función de void.
      * * Son las funciones que no tienen un valor de retorno. No es obligatorio pasarle la palabra reservada void a estas funciones pero si es una buena practica que permite identificar de forma mas facil que tipo de funcion es. 
@@ -849,6 +848,129 @@
     /**
       * TODO: Punto 11.
       * ? Programación Orientada a objetos.
-      * * 
+      * * La programación orientada a objetos(POO) es uno de los paradigmas de programación mas usados. Los objetos son entidades que representan conceptos del mundo real y que tienen sus propias características (atributos) y tambien sus propias funciones o acciones (metodos).
+      * ? Principales conceptos.
+      * ! Clase. 
+      * * Es el molde en el que definimos las características (atributos) y las acciones (metodos) que van a tener los objetos.
+      * ! Objeto.
+      * * Es la instancia de una clase ya creada, representa un individuo o entidad específica y tiene sus propiedades y comportamientos.
+      * ! Atributos.
+      * * Son las propuedades o características de un objeto. Definen el estado de un objeto y se representan mediante variables en la clase.
+      * ! Métodos.
+      * * Son las funciones creadas dentro de la clase que le permiten tener diferentes acciones a nuestros objetos.
+      * ! Encapsulación.
+      * * Es el principio que establece que los atributos y métodos relacionados deben agruparse en una clase para ocultar los detalles internos y exponer solo una interfaz pública. Esto se logra mediante la especificación de niveles de acceso (público, privado, protegido) para los atributos y métodos.
+      * ! Herencia.
+      * * Es un mecanismo que nos permite pasarle (heredarle) los metodos y atributos de una clase padre (superclase) a una clase hija (subclase). Esto nos permite la reutilización de código y la creación de jerarquías de clases.
+      * ! Polimorfismo.
+      * * Es la capacidad para hacer que al invocar la misma acción (método) desde distintos objetos, cada uno de esos objetos pueda pueda reacciónar de forma diferente.
       */
+    echo "Los ejemplos estan despues, por ahora lea la documentación.";  
+
+    echo "<hr><h1>Punto 12.</h1>";
+    /**
+     * Todo: Punto 12.
+     * ? Modificadores de acceso en PHP.
+     * * Los modificadores de acceso son palabras clave utilizadas en la programación orientada a objetos para controlar la visibilidad y el acceso a los miembros (atributos y metodos) de una clase. los modificadores de acceso que hay en PHP son los siguientes.
+     * ! Public.
+     * * Los miembros que se declaren como 'public' son accesibles desde todas partes, ya sea en la misma clase, en subclases o desde fuera de las clases.
+     * ! Private.
+     * * Los miembros que se declaren como 'private' solo son accesibles desde dentro de la misma clase en la se definen. No se puede acceder a ellos fuera de la clase, ni desde subclases.
+     * ! Protected.
+     * * Los miembros que se declaren como 'protected' son accesibles desde dentro de la misma clase y desde clases heredadas (subclases). Sin embargo, no pueden ser accedidos desde fuera de la clase directamente.
+     */
+    echo "Los ejemplos estan despues, por ahora lea la documentación.";
+
+    echo "<hr><h1>Punto 13.</h1>";
+    /**
+     * Todo: Punto 13.
+     * ? Clases.
+     * * Es el molde en el que definimos las características y comportamientos de los objetos que se crean a partir de dicha clase.
+     */
+    class Persona_ejemplo1 {
+        public function __construct(private string $nombre, protected int $edad, private int $cedula) {
+            $this->nombre = $nombre;
+            $this->edad = $edad;
+            $this->cedula = $cedula;
+        }
+        public function getNombre() {
+            return $this->nombre;
+        }
+        public function setNombre($nombre) {
+            $this->nombre = $nombre;
+        }
+        public function getCedula() {
+            return $this->cedula;
+        }
+        public function setCedula($cedula) {
+            $this->cedula = $cedula;
+        }
+        public function getEdad() {
+            return $this->edad;
+        }
+        public function setEdad($edad) {
+            $this->edad = $edad;
+        }
+        public function saludar() {
+            echo "hola, mi nombre es ".$this->nombre." y tengo ".$this->edad ." años. Mi cedula es ".$this->cedula;
+        }
+    }
+    $ejemplo_clase = new Persona_ejemplo1('Luis Rueda', 19, 1015392475);
+    echo $ejemplo_clase->saludar();
+
+    echo "<hr><h1>Punto 14.</h1>";
+    /**
+     * Todo: Punto 14.
+     * ? Métodos estáticos.
+     * * En programación, un método estático es un método que pertenece a la clase en sí y no a una instancia específica de la clase. A diferencia de los métodos de instancia, los métodos estáticos se pueden llamar directamente en la clase sin necesidad de crear un objeto o instancia de la misma.
+     * ? Características importantes de los métodos estáticos.
+     * ! No requieren una instancia.
+     * * Los metodos estaticos se pueden invocar directamente desde la clase, utilizando la la sintaxis 'Clase::metodoEstatico()', sin necesidad de instancear la clase con un objeto.
+     * ! No pueden acceder a propiedades de la instancia.
+     * * Los métodos estáticos no pueden acceder directamente a las propiedades de instancia de la clase, ya que no tienen una instancia específica asociada. Solo pueden acceder a propiedades estáticas (atributos estáticas) que pertenezcan a la clase.
+     * ! No pueden utilizar $this.
+     * * En un método estático, no se puede utilizar la palabra clave $this para hacer referencia a la instancia actual de la clase, ya que no hay una instancia asociada.
+     */
+    class Persona_ejemplo2 {
+        private static $nombreEstatico;
+        public function __construct(private string $nombre, protected int $edad, private int $cedula,) {
+            $this->nombre = $nombre;
+            $this->edad = $edad;
+            $this->cedula = $cedula;
+            self::$nombreEstatico = $nombre;
+        }
+        public function getNombre() {
+            return $this->nombre;
+        }
+        public function setNombre($nombre) {
+            $this->nombre = $nombre;
+        }
+        public function getCedula() {
+            return $this->cedula;
+        }
+        public function setCedula($cedula) {
+            $this->cedula = $cedula;
+        }
+        public function getEdad() {
+            return $this->edad;
+        }
+        public function setEdad($edad) {
+            $this->edad = $edad;
+        }
+        public static function saludar() {
+            return "Hola como estas ". self::$nombreEstatico;
+        }
+    }
+    // Ejemplo de uso del metodo estatico sin instancia.
+    echo Persona_ejemplo2::saludar(); echo "<br>";
+    $ejemplo_clase2 = new Persona_ejemplo2('Luis Rueda', 19, 1015392475);
+    // Ejemplo de uso del metodo estatico con instancia.
+    echo Persona_ejemplo2::saludar();
+
+    echo "<hr><h1>Punto 15.</h1>";
+    /**
+     * Todo: Punto 15.
+     * ? Herencia.
+     * * La herencia nos permite crear nuevas clases (subclase) de clases ya existentes (superclase), aprovechando y extendiendo su funcionalidad.
+     */
 ?>
